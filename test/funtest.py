@@ -103,3 +103,14 @@ def normalize(name):
 L1 = ['adam', 'LISA', 'barT']
 L2 = list(map(normalize, L1))
 print(L2)
+
+
+print("---------------------------------")
+
+def is_odd(n):
+    return n % 2 == 1
+print(list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15])))
+
+print("---------------------------------")
+L = list(filter(lambda n:n%2==1, range(1, 20)))
+print(L)
