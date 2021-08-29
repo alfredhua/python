@@ -2,7 +2,6 @@ import logging; logging.basicConfig(level=logging.INFO)
 
 from aiohttp import web
 
-
 async def handle(request):
     name = request.match_info.get('name', "Anonymous")
     text = "Hello, " + name
