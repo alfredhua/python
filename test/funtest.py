@@ -114,3 +114,12 @@ print(list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15])))
 print("---------------------------------")
 L = list(filter(lambda n:n%2==1, range(1, 20)))
 print(L)
+
+
+print("---------------------------------------")
+def more(x,y):
+    nx=x+2
+    ny=y+2
+    return nx,ny
+
+print(more(3,9))
