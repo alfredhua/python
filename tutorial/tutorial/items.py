@@ -5,8 +5,11 @@
 
 import scrapy
 
-
-class TutorialItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class StockstartItem(scrapy.Item):
+    code = scrapy.Field()
+    abbr = scrapy.Field()
+    last_trade = scrapy.Field()
+    chg_ratio = scrapy.Field()
+    cha_amt = scrapy.Field()
+    volumn = scrapy.Field()
+    turn_over = scrapy.Field()
