@@ -8,6 +8,8 @@ class StockSpider(scrapy.Spider):
 
     def parse(self, response):
         page = int (response.url.split("_")[-1].split(".")[0])
+        if page > 10:
+            return
         item_nodes = response.css('#datalist tr')
         for item_node in item_nodes:
             stock=StockstartItem()
