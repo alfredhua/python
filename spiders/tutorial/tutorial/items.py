@@ -13,3 +13,12 @@ class StockstartItem(scrapy.Item):
     cha_amt = scrapy.Field()
     volumn = scrapy.Field()
     turn_over = scrapy.Field()
+
+
+class DouBanBook(scrapy.Item):
+    id = scrapy.Field()
+    book_name = scrapy.Field()
+    desc = scrapy.Field()
+    url = scrapy.Field()
+    author = scrapy.Field()
+    person_num = scrapy.Field()
