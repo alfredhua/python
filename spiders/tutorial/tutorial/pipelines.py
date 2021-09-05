@@ -26,4 +26,5 @@ class DouBanPipeline:
         return item
 
     def process_content(self, content):
-        return content.replace('\xa0|\s','')
+        content=content.replace('\n','')
+        return content.replace(' ','')

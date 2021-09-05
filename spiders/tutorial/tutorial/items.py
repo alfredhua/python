@@ -22,3 +22,4 @@ class DouBanBook(scrapy.Item):
     url = scrapy.Field()
     author = scrapy.Field()
     person_num = scrapy.Field()
+    score = scrapy.Field()
