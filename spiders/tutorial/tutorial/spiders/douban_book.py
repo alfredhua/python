@@ -18,24 +18,19 @@ class douban_book(scrapy.Spider):
         if dls == None:
             return
         for dl in dls:
-            book=DouBanBook()
-            book['book_name'] =dl.css('dd a::text').get()
-            book['desc'] =dl.css('dd .desc::text').get()
             url= dl.css('dd a::attr(href)').get()
-            book['url']=url
             yield scrapy.Request(url=url,callback=self.parse_detail,headers=self.hds,meta={"book": book})
-
         start=response.url.split('?')[1]
         current_start=int(start.split('=')[1])
         next_start=(current_start+15)
-        # if next_start>15:
-        #     return
         next_url=response.url.replace(start,"start={0}".format(next_start))
         yield scrapy.Request(url=next_url,headers=self.hds,callback=self.parse)
 
     
     def parse_detail(self,response,**kwargs):
-        book = response.meta["book"]
+        book=DouBanBook()
+        book['book_name'] = response.css('').get() 
+        book['desc'] = response.css('').get() 
         person_num=response.css('#interest_sectl .rating_sum a span::text').get()
         score=response.css('#interest_sectl strong::text').get()
         author=response.css('#info span:nth-child(1) a::text').get()
