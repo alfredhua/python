@@ -20,7 +20,7 @@ class Solution(object):
         return prex[0:index]
 
 
-print(Solution().longestCommonPrefix(["flower","flow","floght"]))
+print(Solution().longestCommonPrefix(["flower","flow","fl1ght"]))
 
         
 
