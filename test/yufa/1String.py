@@ -1,6 +1,7 @@
 s = '学习Python'
 
-print(s[:3])
+print(s[3::4])
+print(s[0:3])
 print(s[0],s[1],s[-1],s[3:],s[::-1])
 replace=s.replace('Python','Java')
 print(replace)
