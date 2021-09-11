@@ -8,3 +8,13 @@ class Solution:
                 maxNum =max(num,maxNum)
         
         return maxNum
+    
+    def maxSubArray2(self, nums: list[int]) -> int:
+        prex=0
+        maxAns=nums[0]
+        for i in nums:
+            prex =max(prex+i,i)
+            maxAns=max(maxAns,prex)
+        
+        return maxAns
+
