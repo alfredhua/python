@@ -17,7 +17,6 @@ class Solution:
             else:
                 result.append(nums2[p2])
                 p2=p2+1
-        
         for i in range(len(result)):
             nums1[i]=result[i]
         
