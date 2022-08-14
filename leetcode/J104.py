@@ -9,8 +9,9 @@ class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
-        
+
         leftMaxDep=self.maxDepth(root=root.left)
         rightMaDep=self.maxDepth(root=root.right)
 
         return max(leftMaxDep,rightMaDep)+1
+
